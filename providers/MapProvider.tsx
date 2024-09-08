@@ -1,6 +1,5 @@
 'use client';
 
-import LoadingPageIcon from '@/components/LoadingPageIcon';
 import { Libraries, useJsApiLoader } from '@react-google-maps/api';
 import { ReactNode } from 'react';
 
@@ -16,7 +15,7 @@ export function MapProvider({ children }: { children: ReactNode }) {
 
   if (loadError) return <p>Encountered error while loading google maps</p>;
 
-  if (!scriptLoaded) return <LoadingPageIcon />;
+  if (!scriptLoaded) return null;
 
   // Return the children prop wrapped by this MapProvider component
   return children;

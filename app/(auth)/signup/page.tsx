@@ -38,7 +38,7 @@ const SignUp = () => {
 
   return (
     <div className="w-full max-w-md p-8 bg-white shadow-lg rounded-lg">
-      <h2 className="text-xl font-extrabold text-left mb-6">
+      <h2 className="text-xl text-black font-extrabold text-left mb-6">
         Create new account
       </h2>
       <form onSubmit={handleSubmit}>
@@ -51,7 +51,7 @@ const SignUp = () => {
               type="email"
               id="email"
               placeholder="lwin@gmail.com"
-              className="col-span-5 md:col-span-4"
+              className="col-span-5 md:col-span-4 "
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
@@ -65,7 +65,7 @@ const SignUp = () => {
               type="password"
               id="password"
               placeholder="password"
-              className="col-span-5 md:col-span-4"
+              className="col-span-5 md:col-span-4 "
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               required

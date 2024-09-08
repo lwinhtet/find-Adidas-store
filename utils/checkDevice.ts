@@ -15,15 +15,23 @@ export const generateDirectionUrlBasedOnDevice = (
   if (isMobile) {
     // iOS devices (Google Maps)
     if (/iPhone|iPad|iPod/.test(navigator.userAgent)) {
-      directionsUrl = `comgooglemaps://?saddr=${userLocation!.lat},${
+      // directionsUrl = `comgooglemaps://?saddr=${userLocation!.lat},${
+      //   userLocation!.lng
+      // }&daddr=${store.geometry.location.lat},${store.geometry.location.lng}`;
+      directionsUrl = `maps:directions?origin=${userLocation!.lat},${
         userLocation!.lng
-      }&daddr=${store.geometry.location.lat},${store.geometry.location.lng}`;
+      }&destination=${store.geometry.location.lat},${
+        store.geometry.location.lng
+      }`;
     }
     // Android devices (Google Maps)
     else if (/Android/.test(navigator.userAgent)) {
-      directionsUrl = `geo:${userLocation!.lat},${userLocation!.lng}?q=${
-        store.geometry.location.lat
-      },${store.geometry.location.lng}`;
+      // directionsUrl = `geo:${userLocation!.lat},${userLocation!.lng}?q=${
+      //   store.geometry.location.lat
+      // },${store.geometry.location.lng}`;
+      directionsUrl = `google.navigation:q=${store.geometry.location.lat},${
+        store.geometry.location.lng
+      }&origin=${userLocation!.lat},${userLocation!.lng}`;
     }
   }
 

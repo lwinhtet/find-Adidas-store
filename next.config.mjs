@@ -2,6 +2,7 @@
 const nextConfig = {
   images: {
     domains: [
+      'graph.facebook.com',
       'storage.googleapis.com',
       'lh1.googleusercontent.com',
       'lh2.googleusercontent.com',

@@ -43,7 +43,7 @@ export const UserLocationProvider = ({ children }: { children: ReactNode }) => {
     if ('geolocation' in navigator) {
       navigator.geolocation.getCurrentPosition(
         (position) => {
-          console.log('Success: fetched user location');
+          // console.log('Success: fetched user location');
           const { latitude, longitude } = position.coords;
           setUserLocation({ lat: latitude, lng: longitude });
         },
