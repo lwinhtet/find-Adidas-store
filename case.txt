@@ -1,8 +1,0 @@
-Where to put your facebook OAuth redirect URI?
-https://developers.facebook.com/apps/1744352852766052/use_cases/customize/settings/?product_route=fb-login
-
-In facebook login, add email permission
-https://developers.facebook.com/apps/1744352852766052/use_cases/customize/?use_case_enum=FB_LOGIN
-
-Link Multiple Auth Providers
-https://firebase.google.com/docs/auth/web/account-linking?authuser=0
